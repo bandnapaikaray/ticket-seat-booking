@@ -13,7 +13,7 @@ export interface BookingResponse {
   totalPrice?: number;
 }
 
-const API_BASE = "/api";
+const API_BASE = (import.meta as any).env.VITE_API_BASE || "/api";
 
 export async function fetchSeats(): Promise<Seat[]> {
   const res = await fetch(`${API_BASE}/seats`);
