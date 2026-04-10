@@ -13,6 +13,11 @@ const PORT = process.env.PORT || 4000;
 app.use(cors());
 app.use(express.json());
 
+// ─── Root Route ───────────────────────────────────────────────
+app.get("/", (_req, res) => {
+  res.send("Ticket Booking API is running! Use /api/seats to see data.");
+});
+
 // ─── GET /api/seats ────────────────────────────────────────────
 // Returns the full list of seats with their current status
 app.get("/api/seats", (_req, res) => {

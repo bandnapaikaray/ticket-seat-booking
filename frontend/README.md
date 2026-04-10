@@ -1,73 +1,99 @@
-# React + TypeScript + Vite
+# 🎟️ Ticket Seat Booking System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, interactive seat booking application built with **React**, **TypeScript**, and **Express**. This project features a dynamic seat map, real-time price calculation, and a smooth booking flow designed for an optimal user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- **Interactive Seat Map**: A visual 2D grid representing the venue layout.
+- **Dynamic Pricing**: Support for various seat tiers (VIP vs General) with clear pricing indicators.
+- **Real-time Selection**: Toggle seat selections with immediate total price updates.
+- **Smart Booking Flow**: Validated booking process requiring name and email details.
+- **Robust Persistence**: Backend synchronization to prevent double-booking and maintain seat status.
+- **Premium UI/UX**: Clean design with responsive layouts and interactive hover effects.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Frontend
+- **React 18**: Component-based UI library.
+- **TypeScript**: For type-safe development.
+- **Vite**: Ultra-fast build tool and development server.
+- **Tailwind CSS**: Utility-first styling for a modern aesthetic.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Backend
+- **Node.js & Express**: Lightweight and fast server framework.
+- **ts-node-dev**: Seamless TypeScript execution with auto-reload.
+- **CORS**: Configured for secure frontend-backend communication.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ Getting Started
+
+To get the application up and running locally, follow these steps.
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v16.0 or higher recommended)
+- npm, pnpm, or yarn
+
+### 1. Clone the Repository
+```bash
+git clone <repository-url>
+cd ticket-seat-booking
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2. Setup the Backend
+Open a new terminal window:
+```bash
+cd backend
+npm install
+npm run dev
 ```
+The server will start at `http://localhost:4000`.
+
+### 3. Setup the Frontend
+Open another terminal window:
+```bash
+cd frontend
+npm install
+npm run dev
+```
+The application will be available at `http://localhost:5173`.
+
+---
+
+## 📂 Project Structure
+
+```text
+├── backend
+│   ├── src
+│   │   ├── index.ts      # Server entry point & API routes
+│   │   ├── data.ts       # Mock seat data
+│   │   └── types.ts      # Shared TypeScript interfaces
+│   └── package.json
+└── frontend
+    ├── src
+    │   ├── components    # SeatMap, BookingSummary, etc.
+    │   ├── api.ts        # Service layer for API calls
+    │   ├── App.tsx       # Main application logic
+    │   └── main.tsx      # React entry point
+    └── package.json
+```
+
+---
+
+## 📡 API Endpoints
+
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| `GET` | `/` | Health check for the API |
+| `GET` | `/api/seats` | Fetch the latest status of all seats |
+| `POST` | `/api/book` | Submit a booking request (requires `seatIds`, `name`, `email`) |
+
+---
+
+## 📝 License
+
+This project is open-source and available under the MIT License.
