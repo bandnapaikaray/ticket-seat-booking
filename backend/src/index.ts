@@ -78,7 +78,7 @@ app.post("/api/book", (req, res) => {
     totalPrice += seat.price;
   }
 
-  console.log(`✅ Booked seats [${seatIds.join(", ")}] for ${name} (${email}) — $${totalPrice}`);
+  console.log(`Booked seats [${seatIds.join(", ")}] for ${name} (${email}) — $${totalPrice}`);
 
   const response: BookingResponse = {
     success: true,
