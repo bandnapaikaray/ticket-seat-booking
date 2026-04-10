@@ -1,10 +1,10 @@
-# 🎟️ Ticket Seat Booking System
+# Ticket Seat Booking System
 
 A premium, interactive seat booking application built with **React**, **TypeScript**, and **Express**. This project features a dynamic seat map, real-time price calculation, and a smooth booking flow designed for an optimal user experience.
 
 ---
 
-## ✨ Features
+## Features
 
 - **Interactive Seat Map**: A visual 2D grid representing the venue layout.
 - **Dynamic Pricing**: Support for various seat tiers (VIP vs General) with clear pricing indicators.
@@ -15,7 +15,7 @@ A premium, interactive seat booking application built with **React**, **TypeScri
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 ### Frontend
 - **React 18**: Component-based UI library.
@@ -30,7 +30,7 @@ A premium, interactive seat booking application built with **React**, **TypeScri
 
 ---
 
-## 🛠️ Getting Started
+## Getting Started
 
 To get the application up and running locally, follow these steps.
 
@@ -70,7 +70,7 @@ npm run dev
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 ├── backend
@@ -90,7 +90,7 @@ npm run dev
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
@@ -100,6 +100,6 @@ npm run dev
 
 ---
 
-## 📝 License
+## License
 
 This project is open-source and available under the MIT License.
