@@ -44,23 +44,29 @@ git clone <repository-url>
 cd ticket-seat-booking
 ```
 
-### 2. Setup the Backend
-Open a new terminal window:
+### 2. Run Both Frontend & Backend (Recommended)
+You can start both services with a single command from the root directory:
+```bash
+npm run dev
+```
+*Wait for both the magenta (Backend) and cyan (Frontend) logs to appear.*
+
+### 3. Setup Individually (Alternative)
+If you prefer running them in separate terminals:
+
+**Backend**:
 ```bash
 cd backend
 npm install
 npm run dev
 ```
-The server will start at `http://localhost:4000`.
 
-### 3. Setup the Frontend
-Open another terminal window:
+**Frontend**:
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-The application will be available at `http://localhost:5173`.
 
 ---
 
